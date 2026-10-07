@@ -4,6 +4,8 @@
   /* margin: 0px !important; */
   /* padding: 0px !important; */
   box-sizing: border-box !important;
+  font-family: Monstserrat;
+  font-weight: 700;
 }
 body {
   background: url(../Images/bg.jpg);
@@ -18,4 +20,10 @@ body {
 }
 .blur-back {
   backdrop-filter: blur(3px);
+}
+.logocss {
+  height: 30px;
+  /* flex-basis: 30%; */
+  aspect-ratio: auto;
+  box-shadow: 0px 0px 0px 0px white;
 }

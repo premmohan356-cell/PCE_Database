@@ -20,7 +20,14 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark text-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a
+          class="navbar-brand border border-danger d-flex flex-column justify-content-start align-items-center"
+          href="#"
+          ><img src="Images/logo.png" class="logocss" alt="" /><span
+            style="font-size: 0.8rem"
+            >Prabhat.com</span
+          ></a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -70,7 +77,7 @@
       <div class="col-md-6 p-5"></div>
       <div class="col-md-6">
         <div
-          class="w-75 ms-auto text-white p-3 border border-light rounded-4 blur-back"
+          class="w-100 ms-auto text-white p-3 border border-light rounded-4 blur-back"
         >
           <h1 class="text-light fs-3">Signup Form</h1>
           <hr />
@@ -84,14 +91,20 @@
           </div>
           <div class="text-white mt-2">
             <label for="PassInput" class="form-label mb-2">Password</label>
-            <input type="password" class="form-control w-75" id="PassInput" />
+            <input type="text" class="form-control w-75" id="PassInput" />
           </div>
           <div class="d-flex justify-content-between align-items-center mt-3">
-            <span class="text-danger">Do Your Verify Your Credentials</span
-            ><button class="btn text-light border blur-back border-light">
-              Submit
+            <span class="text-danger">Click Here to improve Security</span
+            ><button
+              class="btn btn-success text-light border blur-back border-light"
+              id="passgenbtn"
+            >
+              Generate
             </button>
           </div>
+          <button class="btn btn-secondary w-50 d-block mx-auto mt-3">
+            Submit
+          </button>
         </div>
       </div>
     </div>
