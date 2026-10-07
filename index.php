@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark text-light">
       <div class="container-fluid">
         <a
-          class="navbar-brand border border-danger d-flex flex-column justify-content-start align-items-center"
+          class="navbar-brand d-flex flex-column justify-content-start align-items-center"
           href="#"
           ><img src="Images/logo.png" class="logocss" alt="" /><span
             style="font-size: 0.8rem"
@@ -91,7 +91,11 @@
           </div>
           <div class="text-white mt-2">
             <label for="PassInput" class="form-label mb-2">Password</label>
-            <input type="text" class="form-control w-75" id="PassInput" />
+            <input type="password" class="form-control w-75" id="PassInput" />
+            <input type="checkbox" id="checkpass" class="ms-2" />
+            <span class="fw-lighter" style="font-size: 0.9rem"
+              >check password</span
+            >
           </div>
           <div class="d-flex justify-content-between align-items-center mt-3">
             <span class="text-danger">Click Here to improve Security</span
