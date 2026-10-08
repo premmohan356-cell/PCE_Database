@@ -27,3 +27,14 @@ body {
   aspect-ratio: auto;
   box-shadow: 0px 0px 0px 0px white;
 }
+#checkpass {
+  position: absolute;
+  bottom: 5px;
+  left: 68%;
+}
+.hiding-fa {
+  color: grey;
+}
+.showing-fa {
+  color: black;
+}
