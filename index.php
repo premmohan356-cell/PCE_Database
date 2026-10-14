@@ -73,14 +73,14 @@
                 </li>
               </ul>
             </li>
-            <li class="nav-item mx-2">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            <li class="nav-item mx-2 Login-btn">
+              <a class="nav-link Login-btn" aria-disabled="true" id="log-sign-Tog-btn">Login</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <div class="row mx-auto mt-3">
+    <div class="row mx-auto mt-3" id="SignUpPage">
       <div class="col-md-6 p-5"></div>
       <div class="col-md-6">
         <div
@@ -123,6 +123,9 @@
         </div>
       </div>
     </div>
+    <?php
+      include("PHP/login.php");    
+    ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="JS/jquery.min.js"></script>
     <script src="JS/main.js"></script>

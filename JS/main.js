@@ -32,3 +32,11 @@ $(document).ready(function () {
     }
   });
 });
+// Login and SignUp toggle..........................................
+let SignLogTog = document.querySelector("#log-sign-Tog-btn");
+SignLogTog.addEventListener("click", function () {
+  let SignPage = document.getElementById("SignUpPage");
+  let LogPage = document.getElementById("LoginPage");
+  SignPage.classList.toggle("d-none");
+  LogPage.classList.toggle("d-none");
+});

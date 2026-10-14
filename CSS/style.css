@@ -38,3 +38,14 @@ body {
 .showing-fa {
   color: black;
 }
+.Login-btn {
+  background-color: blue;
+  padding-inline: 10px;
+  color: white !important;
+  font-size: 1rem;
+  user-select: none;
+}
+.Login-btn:hover {
+  background-color: white;
+  color: blue !important;
+}
