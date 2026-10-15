@@ -39,4 +39,25 @@ SignLogTog.addEventListener("click", function () {
   let LogPage = document.getElementById("LoginPage");
   SignPage.classList.toggle("d-none");
   LogPage.classList.toggle("d-none");
+  console.log(this.innerHTML);
+  if (this.innerText == "Login") {
+    this.innerText = "Signup";
+  } else {
+    this.innerText = "Login";
+  }
+});
+
+$(document).ready(function () {
+  $("#EmailInput").on("input", function () {
+    $(".spiner-css").removeClass("d-none");
+    // checkemail work.....................................................
+    $.ajax({
+      type: "POST",
+      url: "PHP/checkemail.php",
+      data: "email=" + $(this).val(),
+      success: function (res) {
+        console.log(res);
+      },
+    });
+  });
 });

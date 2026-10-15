@@ -49,3 +49,11 @@ body {
   background-color: white;
   color: blue !important;
 }
+.spiner-css {
+  bottom: 10px;
+  left: 70%;
+}
+button:disabled {
+  pointer-events: auto !important;
+  cursor: not-allowed !important;
+}

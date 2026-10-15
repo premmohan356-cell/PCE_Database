@@ -88,13 +88,15 @@
         >
           <h1 class="text-light fs-3">Signup Form</h1>
           <hr />
+          <form action="">
           <div class="text-white mt-2">
             <label for="UserInput" class="form-label mb-2">Username</label>
-            <input type="text" class="form-control w-75" id="UserInput" />
+            <input type="text" class="form-control w-75" id="UserInput" required />
           </div>
-          <div class="text-white mt-2">
+          <div class="text-white mt-2 position-relative">
             <label for="EmailInput" class="form-label mb-2">Email Id</label>
-            <input type="email" class="form-control w-75" id="EmailInput" />
+            <i class="fa fa-cog fa-spin position-absolute spiner-css text-success d-none" aria-hidden="true"></i>
+            <input type="email" class="form-control w-75" id="EmailInput" required />
           </div>
           <div class="text-white mt-2 position-relative">
             <label for="PassInput" class="form-label mb-2">Password</label>
@@ -103,6 +105,7 @@
               class="form-control w-75"
               id="PassInput"
               maxlength="7"
+              required
             />
             <span id="checkpass" checked="false"
               ><i class="fa-solid fa-eye hiding-fa"></i
@@ -117,9 +120,10 @@
               Generate
             </button>
           </div>
-          <button class="btn btn-secondary w-50 d-block mx-auto mt-3">
+          <button class="btn btn-secondary w-50 d-block mx-auto mt-3 disabled" type="submit" disabled>
             Submit
           </button>
+          </form>
         </div>
       </div>
     </div>
