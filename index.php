@@ -88,7 +88,7 @@
         >
           <h1 class="text-light fs-3">Signup Form</h1>
           <hr />
-          <form action="">
+          <form action="" id="SignForm">
           <div class="text-white mt-2">
             <label for="UserInput" class="form-label mb-2">Username</label>
             <input type="text" class="form-control w-75" id="UserInput" required />
@@ -116,11 +116,12 @@
             ><button
               class="btn btn-success text-light border blur-back border-light"
               id="passgenbtn"
+              type="button"
             >
               Generate
             </button>
           </div>
-          <button class="btn btn-secondary w-50 d-block mx-auto mt-3 disabled" type="submit" disabled>
+          <button class="btn btn-secondary w-50 d-block mx-auto mt-3 " type="submit" id="subbtn" disabled>
             Submit
           </button>
           </form>
