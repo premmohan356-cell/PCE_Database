@@ -13,8 +13,11 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
             $v_code[]=$randInt;
         }
         $strv_code=implode($v_code);
-        echo $strv_code;
-        // print_r($v_code);
+        $newquery="INSERT INTO userdetails(Full_Name,Email,Password,Activate_Code)VALUES('$user','$email','$pass','$strv_code');";
+        if($db->query($newquery)){
+            echo "User Data Saved";
+        }
+       
         
     }
 }

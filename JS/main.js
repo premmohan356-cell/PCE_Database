@@ -50,6 +50,7 @@ SignLogTog.addEventListener("click", function () {
 // Email_input......................
 $(document).ready(function () {
   $("#EmailInput").on("input", function () {
+    console.log("Heelo");
     $(".spiner-css").removeClass("d-none");
   });
   // checkemail work.....................................................
@@ -59,6 +60,8 @@ $(document).ready(function () {
       url: "PHP/checkemail.php",
       data: "email=" + $(this).val(),
       success: function (res) {
+        console.log("BYE");
+        console.log(res.trim());
         if (res.trim() == "Email Has Not Found") {
           $(".spiner-css").removeClass("d-none fa-spin fa-cog");
           $(".spiner-css").addClass("fa-circle-check");
