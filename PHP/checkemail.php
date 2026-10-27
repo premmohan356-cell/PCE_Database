@@ -6,7 +6,7 @@ if($server==="POST"){
     $email=$_POST["email"];
     // $email="prem@gmail.com";
 
-    $myquery="SELECT Email FROM userdetails WHERE Email='$email'";
+    $myquery="SELECT Email FROM userdetails WHERE TRIM(Email)=TRIM('$email')";
     // echo $myquery;
     $res=$db->query($myquery);
     // print_r($res);

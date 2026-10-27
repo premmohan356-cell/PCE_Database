@@ -40,7 +40,7 @@ SignLogTog.addEventListener("click", function () {
   let LogPage = document.getElementById("LoginPage");
   SignPage.classList.toggle("d-none");
   LogPage.classList.toggle("d-none");
-  console.log(this.innerHTML);
+  // console.log(this.innerHTML);
   if (this.innerText == "Login") {
     this.innerText = "Signup";
   } else {
@@ -50,8 +50,8 @@ SignLogTog.addEventListener("click", function () {
 // Email_input......................
 $(document).ready(function () {
   $("#EmailInput").on("input", function () {
-    console.log("Heelo");
-    $(".spiner-css").removeClass("d-none");
+    $(".spiner-css").addClass("fa-cog fa-spin");
+    $(".spiner-css").removeClass("d-none fa-circle-check fa-times text-danger");
   });
   // checkemail work.....................................................
   $("#EmailInput").on("change", function () {
@@ -60,16 +60,16 @@ $(document).ready(function () {
       url: "PHP/checkemail.php",
       data: "email=" + $(this).val(),
       success: function (res) {
-        console.log("BYE");
-        console.log(res.trim());
+        // console.log("BYE");
+        // console.log(res.trim());
         if (res.trim() == "Email Has Not Found") {
-          $(".spiner-css").removeClass("d-none fa-spin fa-cog");
+          $(".spiner-css").removeClass("d-none fa-spin fa-cog text-danger");
           $(".spiner-css").addClass("fa-circle-check");
           $("#subbtn").removeAttr("disabled");
           // $("button").hasClass("disabled").removeClass("disabled");
         } else if (res.trim() == "Email has Found") {
-          $(".spiner-css").removeClass("d-none fa-spin fa-cog");
-          $(".spiner-css").addClass("fa-times");
+          $(".spiner-css").removeClass("d-none fa-spin fa-cog fa-circle-check");
+          $(".spiner-css").addClass("fa-times text-danger");
           $("#subbtn").attr("disabled", "disabled");
         }
         if ($("#EmailInput").val() == "") {
@@ -90,9 +90,27 @@ $(document).ready(function () {
         email: $("#EmailInput").val(),
         password: $("#PassInput").val(),
       },
+      beforeSend: function () {
+        $("#subbtn").text("Please Wait..............");
+        $("#subbtn").attr("disabled", "disabled");
+      },
       success: function (res) {
         console.log(res);
-        document.getElementById("SignForm").reset();
+        if (res.trim() == "User Data Saved") {
+          $("#SignForm").next().removeClass("d-none");
+          $("#subbtn").attr("disabled", "disabled");
+          window.setTimeout(function () {
+            $("#SignForm").next().addClass("d-none");
+            window.location.reload();
+          }, 3000);
+        } else if (res.trim() == "EmailId Is wrong") {
+          $("#SignForm").next().next().removeClass("d-none");
+          $("#subbtn").attr("disabled", "disabled");
+          window.setTimeout(function () {
+            window.location.reload();
+          }, 3000);
+        }
+        // document.getElementById("SignForm").reset();
       },
     });
   });

@@ -4,15 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <!-- Css Link Bootstrap Online Ajax........................... -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js
-"
-    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
@@ -20,11 +18,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Css Link Bootstrap Online Ajax..................(end)........ -->
+    <!-- Css JS Link Bootstrap OffLine Ajax.............(start)....... -->
     <link rel="stylesheet" href="CSS/bootstrap.min.css" />
     <link rel="stylesheet" href="CSS/style.css" />
     <script src="JS/bootstrap.bundle.min.js"></script>
+    <!-- Css JS Link Bootstrap OffLine Ajax.............(end)....... -->
+
   </head>
   <body>
+  <!-- Navbar(.............start..........................--->
     <nav class="navbar navbar-expand-lg navbar-dark text-light">
       <div class="container-fluid">
         <a
@@ -80,6 +83,9 @@
         </div>
       </div>
     </nav>
+  <!-- Navbar(.............end..........................--->
+  
+  <!-- SignUp Box(.............start..........................--->
     <div class="row mx-auto mt-3" id="SignUpPage">
       <div class="col-md-6 p-5"></div>
       <div class="col-md-6">
@@ -125,14 +131,21 @@
             Submit
           </button>
           </form>
+          <div class="alert alert-success w-75 mx-auto mt-4 text-secondary shadow-lg d-none">
+            <i class="fa fa-database " aria-hidden="true"></i> Registered Successfully !!
+          </div>
+          <div class="alert alert-danger w-75 mx-auto mt-4 text-danger shadow-lg d-none"> Please Enter Valid Email Id</div>
         </div>
+
       </div>
     </div>
+  <!-- SignUp Box(.............end..........................--->
+
     <?php
       include("PHP/login.php");    
     ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="JS/jquery.min.js"></script>
+    <!-- <script src="JS/jquery.min.js"></script> -->
     <script src="JS/main.js"></script>
   </body>
 </html>
