@@ -6,6 +6,7 @@
   box-sizing: border-box !important;
   font-family: Monstserrat;
   font-weight: 700;
+  transition: 400ms !important;
 }
 body {
   background: url(../Images/bg.jpg);

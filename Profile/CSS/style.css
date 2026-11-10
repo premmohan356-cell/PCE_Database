@@ -1,0 +1,18 @@
+@charset "UTF-8";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css";
+* {
+  box-sizing: border-box !important;
+}
+html {
+  overflow: auto;
+}
+html::-webkit-scrollbar {
+  width: 8px !important;
+}
+html::-webkit-scrollbar-track {
+  background-color: rgba(128, 128, 128, 0.137);
+}
+html::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 5px;
+}

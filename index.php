@@ -6,11 +6,11 @@
     <title>Document</title>
 
     <!-- Css Link Bootstrap Online Ajax........................... -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    /> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
@@ -22,12 +22,10 @@
     <!-- Css JS Link Bootstrap OffLine Ajax.............(start)....... -->
     <link rel="stylesheet" href="CSS/bootstrap.min.css" />
     <link rel="stylesheet" href="CSS/style.css" />
-    <script src="JS/bootstrap.bundle.min.js"></script>
     <!-- Css JS Link Bootstrap OffLine Ajax.............(end)....... -->
-
   </head>
   <body>
-  <!-- Navbar(.............start..........................--->
+    <!-- Navbar(.............start..........................--->
     <nav class="navbar navbar-expand-lg navbar-dark text-light">
       <div class="container-fluid">
         <a
@@ -77,75 +75,137 @@
               </ul>
             </li>
             <li class="nav-item mx-2 Login-btn">
-              <a class="nav-link Login-btn" aria-disabled="true" id="log-sign-Tog-btn">Login</a>
+              <a
+                class="nav-link Login-btn"
+                aria-disabled="true"
+                id="log-sign-Tog-btn"
+                >Login</a
+              >
             </li>
           </ul>
         </div>
       </div>
     </nav>
-  <!-- Navbar(.............end..........................--->
-  
-  <!-- SignUp Box(.............start..........................--->
+    <!-- Navbar(.............end..........................--->
+
+    <!-- SignUp Box(.............start..........................--->
     <div class="row mx-auto mt-3" id="SignUpPage">
       <div class="col-md-6 p-5"></div>
       <div class="col-md-6">
         <div
           class="w-100 ms-auto text-white p-3 border border-light rounded-4 blur-back"
         >
-          <h1 class="text-light fs-3">Signup Form</h1>
-          <hr />
           <form action="" id="SignForm">
-          <div class="text-white mt-2">
-            <label for="UserInput" class="form-label mb-2">Username</label>
-            <input type="text" class="form-control w-75" id="UserInput" required />
-          </div>
-          <div class="text-white mt-2 position-relative">
-            <label for="EmailInput" class="form-label mb-2">Email Id</label>
-            <i class="fa fa-cog fa-spin position-absolute spiner-css text-success d-none" aria-hidden="true"></i>
-            <input type="email" class="form-control w-75" id="EmailInput" required />
-          </div>
-          <div class="text-white mt-2 position-relative">
-            <label for="PassInput" class="form-label mb-2">Password</label>
-            <input
-              type="password"
-              class="form-control w-75"
-              id="PassInput"
-              maxlength="7"
-              required
-            />
-            <span id="checkpass" checked="false"
-              ><i class="fa-solid fa-eye hiding-fa"></i
-            ></span>
-          </div>
-          <div class="d-flex justify-content-between align-items-center mt-3">
-            <span class="text-danger">Click Here to improve Security</span
-            ><button
-              class="btn btn-success text-light border blur-back border-light"
-              id="passgenbtn"
-              type="button"
+            <div class="text-white mt-2">
+              <h1 class="text-light fs-3">Signup Form</h1>
+              <hr />
+              <label for="UserInput" class="form-label mb-2">Username</label>
+              <input
+                type="text"
+                class="form-control w-75"
+                id="UserInput"
+                required
+              />
+            </div>
+            <div class="text-white mt-2 position-relative">
+              <label for="EmailInput" class="form-label mb-2">Email Id</label>
+              <i
+                class="fa fa-cog fa-spin position-absolute spiner-css text-success d-none"
+                aria-hidden="true"
+              ></i>
+              <input
+                type="email"
+                class="form-control w-75"
+                id="EmailInput"
+                required
+              />
+            </div>
+            <div class="text-white mt-2 position-relative">
+              <label for="PassInput" class="form-label mb-2">Password</label>
+              <input
+                type="password"
+                class="form-control w-75"
+                id="PassInput"
+                maxlength="7"
+                required
+              />
+              <span id="checkpass" checked="false"
+                ><i class="fa-solid fa-eye hiding-fa"></i
+              ></span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="text-danger">Click Here to improve Security</span
+              ><button
+                class="btn btn-success text-light border blur-back border-light"
+                id="passgenbtn"
+                type="button"
+              >
+                Generate
+              </button>
+            </div>
+            <button
+              class="btn btn-secondary w-50 d-block mx-auto mt-3"
+              type="submit"
+              id="subbtn"
+              disabled
             >
-              Generate
+              Submit
             </button>
-          </div>
-          <button class="btn btn-secondary w-50 d-block mx-auto mt-3 " type="submit" id="subbtn" disabled>
-            Submit
-          </button>
           </form>
-          <div class="alert alert-success w-75 mx-auto mt-4 text-secondary shadow-lg d-none">
-            <i class="fa fa-database " aria-hidden="true"></i> Registered Successfully !!
-          </div>
-          <div class="alert alert-danger w-75 mx-auto mt-4 text-danger shadow-lg d-none"> Please Enter Valid Email Id</div>
-        </div>
+          <!-- Activation Code Form............................ -->
+          <form action="" class="mt-4 d-none" id="veri-form">
+            <p for="activationInput" class="form-label text-center fs-4">
+              Activation Code
+            </p>
+            <div
+              class="border border-primary w-25 py-4 rounded-5 text-center bg-primary-subtle text-primary mx-auto"
+            >
+              <i class="fa fa-key fs-1" aria-hidden="true"></i>
+            </div>
+            <br />
+            <input
+              type="tel"
+              class="form-control w-50 d-block mx-auto"
+              id="activationInput"
+              placeholder="Verification Code"
+              maxlength="7"
+            /><br />
+            <button
+              class="btn btn-primary w-75 d-block mx-auto"
+              type="submit"
+              id="veri-sub-btn"
+            >
+              Submit
+            </button>
+          </form>
+          <!-- Activation Code Form............................ -->
 
+          <!-- Alert Messeage ...................(start......) -->
+          <div
+            class="alert alert-success w-75 mx-auto mt-4 text-secondary shadow-lg d-none"
+            id="sucess-msg"
+          >
+            <i class="fa fa-database" aria-hidden="true"></i> Registered
+            Successfully !!
+          </div>
+          <div
+            class="alert alert-danger w-75 mx-auto mt-4 text-danger shadow-lg d-none"
+            id="failure-msg"
+          >
+            <i class="fa fa-database" aria-hidden="true"></i> Please Enter Valid
+            Email Id
+          </div>
+          <!-- Alert Messeage ...................(end......) -->
+        </div>
       </div>
     </div>
-  <!-- SignUp Box(.............end..........................--->
+    <!-- SignUp Box(.............end..........................--->
 
-    <?php
-      include("PHP/login.php");    
-    ?>
+    <?php include("PHP/login.php"); ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!-- <script src="JS/jquery.min.js"></script> -->
+    <script src="JS/jquery.min.js"></script>
+    <script src="JS/bootstrap.bundle.min.js"></script>
+
     <script src="JS/main.js"></script>
   </body>
 </html>
