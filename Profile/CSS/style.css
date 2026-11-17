@@ -16,3 +16,15 @@ html::-webkit-scrollbar-thumb {
   background-color: white;
   border-radius: 5px;
 }
+#Aside-box {
+  width: 75%;
+}
+
+@media (min-width: 768px) {
+  #Content-box {
+    width: 75%;
+  }
+  #Aside-box {
+    width: 25%;
+  }
+}

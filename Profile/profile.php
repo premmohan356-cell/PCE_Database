@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(empty($_SESSION["username"])){
+  header("Location:../index.php");
+}
+?>
 <!doctype html>
 <html lang="en" data-bs-theme="dark">
   <head>
@@ -12,7 +18,16 @@
   </head>
   <body>
     <!-- Side Profile work..............................(start) -->
-    <aside class="w-25 min-vh-100 fixed-top bg-inverse">
+    <aside
+      class="w-25 min-vh-100 fixed-top bg-inverse d-none md:d-block z-drawer"
+      id="Aside-box"
+    >
+      <button
+        class="fg-black fs-2xl px-3 rounded-circle position-absolute end-0 top-0 border-0 bg-transparent d-block md:d-none Aside-button"
+        id=""
+      >
+        &times;
+      </button>
       <!-- Profile Image........................................(start) -->
       <div
         class="w-50 ratio-1x1 rounded-circle border border-light mx-auto mt-5 overflow-hidden"
@@ -62,8 +77,26 @@
     </aside>
     <!-- Side Profile work..............................(end) -->
     <div
-      class="w-75 min-vh-100 border border border-secondary position-absolute end-0"
+      class="w-100 min-vh-100 border border border-secondary position-absolute end-0"
+      id="Content-box"
     >
+      <div
+        class="d-flex bg-muted-primary justify-content-between p-3 align-items-center"
+      >
+        <span class="fs-md fw-medium">
+          Welcome to PCE Drive
+          <i class="fa fa-book fg-primary" aria-hidden="true"></i
+        ></span>
+        <div class="d-flex justify-content-start">
+          <input
+            type="text"
+            class="form-control bg-white me-3 fg-black"
+            placeholder="Search"
+          /><button class="d-block md:d-none Aside-button" id="">
+            &#9776;
+          </button>
+        </div>
+      </div>
       <div class="m-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
         voluptatibus modi quia corrupti aut voluptates in harum recusandae

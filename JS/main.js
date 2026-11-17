@@ -165,6 +165,7 @@ $(document).ready(function () {
             SignLogTog.click();
           }, 3000);
         } else {
+          console.log(res);
           console.log("User Not Verified");
           $("#activationInput").css("border", "5px solid red");
           $("#failure-msg").removeClass("d-none");
@@ -207,6 +208,9 @@ $(document).ready(function () {
             $("#Login-msg").addClass("d-none");
             $("#Login-btn").attr("disabled", false);
             $("#login-form")[0].reset();
+            // Location Redirecting.(here Start........)............................................
+            window.location.replace("./Profile/profile.php");
+            // Location Redirecting.(here End........)............................................
           }, 3000);
         } else if (res.trim() == "Password is Wrong") {
           console.log("Please Enter Correct Password");
